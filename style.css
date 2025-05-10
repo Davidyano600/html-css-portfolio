@@ -27,6 +27,17 @@ body{
     justify-content:center ;
     margin-top: 50px;
 } 
+.sidebar a{
+     text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    transition: .5s;
+}
+.sidebar a:hover{
+    font-size: 3rem;
+    font-weight: bold;
+
+}
 
 nav{
     padding: 15px;
@@ -44,7 +55,6 @@ nav{
 
 .main-bar li:first-child{
     font-size: 25px;
-    margin-left: 30px;
     color: white;
     
 }
@@ -277,13 +287,13 @@ nav{
 .wrapper{
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100dvh;
     display: flex;
 
 }
 .wrapper .bars{
 width: 100%;
-height: 100%;
+height: 100dvh;
 background: black;
 z-index: -1;
 transform: translateY(-100%);
@@ -340,5 +350,16 @@ font-size: 40px;
  .main-bar  li:last-child{
     display: block;
  }
+}
+@media(max-width:402px){
+    .btn-info .button{
+        display: block;
+        padding: 10px
+    }
+    .social-media i  {
+       
+       margin-right: 2px;
+    }
+    
 }
 
