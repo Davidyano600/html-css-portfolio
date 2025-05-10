@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="davidyano.jpg">
+    <link rel="stylesheet" href="fontawesome5/css/all.css">
+    <title>obonyano david portfolio</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="bars" style="--i:6;"></div>
+        <div class="bars" style="--i:5;"></div>
+        <div class="bars" style="--i:4;"></div>
+        <div class="bars" style="--i:3;"></div>
+         <div class="bars" style="--i:2;"></div>
+         <div class="bars" style="--i:1;"></div>
+
+    </div>
+    <header>
+    <nav>
+
+          <ul class="sidebar">
+            <li onclick=hideSidebar()><i class="fas fa-times"></i></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+
+         <ul class="main-bar">
+            <li style="float: left;"><a href=""> Portfo<span>Lio</span>.</a></li>
+            <li class="desktop"><a href="#">Home</a></li>
+            <li class="desktop"><a href="#">About</a></li>
+            <li class="desktop"><a href="#">Services</a></li>
+            <li class="desktop"><a href="#">projects</a></li>
+            <li class="desktop"><a href="#">Contact</a></li>
+            <li onclick=showSidebar()> <i class="fas fa-bars" ></i></li>
+        </ul>
+    </nav>
+</header>
+    <section class="home-info">
+        <div class="home-text">
+            <h1>Obonyano David</h1>
+            <h2>I'm a 
+                <span style="--i:4;">Frontend Developer</span>
+                <span style="--i:3;">Youtuber</span>
+                <span style="--i:2;">Designer</span>
+                <span style="--i:1;">Geologist</span>
+            </h2>
+            <p>Lorem ipsum, dolor sit aodit consectetur optio mollitia deleniti blanditiis quas, in architecr abe in?</p>
+
+            <div class="btn-info">
+                
+            <a href="" class="button">Download cv</a>
+            <div class="social-media">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+            
+
+            </div>
+
+           </div>
+       
+        </div>
+        <div class="home-box">
+            <div class="img-box">
+                <div class="img-item">
+                  <img src="img/dyano.jpg" width="px">
+          
+                </div>
+            </div>
+        
+        </div>
+        
+        
+    </section>
+    
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+       function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+       }
+    </script>
+</body>
+</html>
