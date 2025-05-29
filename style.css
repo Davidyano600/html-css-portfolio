@@ -13,7 +13,8 @@ body{
     top: 0;
     right: 0;
     position: fixed;
-    width: 400px;
+    width: 90vw;
+    max-width: 400px;
     height: 100vh;
     height: 100dvh;
     display: none;
@@ -25,6 +26,7 @@ body{
     max-height: 100dvh;
     -webkit-overflow-scrolling: touch;
     touch-action: auto;
+    
 
     
 }
@@ -292,23 +294,22 @@ nav{
      transform: translateX(20%);
 }
 .wrapper{
-    position: absolute;
-    width: 100%;
-    height: 100dvh;
+   position: fixed; /* Ensures it sticks behind everything */
+    width: 100vw;
     height: 100vh;
+    top: 0;
+    left: 0;
     display: flex;
+    z-index: 0;
 
 }
-.wrapper .bars{
-width: 100%;
-height: 100dvh;
-height: 100vh;
-background: black;
-z-index: -1;
-transform: translateY(-100%);
-animation: showBars 0.5s ease-in-out forwards;
-animation-delay: calc(.1s * var(--i));
-overflow: hidden;
+
+.wrapper .bars {
+    flex: 1;
+    background: black;
+    transform: translateY(-100%);
+    animation: showBars 0.5s ease-in-out forwards;
+    animation-delay: calc(0.1s * var(--i));
 }
 .home-info h2 span{
     display: inline-block;
@@ -335,6 +336,22 @@ overflow: hidden;
     }
 }
 @media(max-width:770px){
+   .home-info {
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 5%;
+    gap: 30px;
+  }
+
+  .home-box {
+    transform: none;
+    margin-top: 20px;
+  }
+
+  .img-box {
+    width: 50vw;
+    height: 50vw;
+  } 
  .home-text h1 {
 font-size: 30px;
 color: white;
