@@ -5,31 +5,29 @@
     font-family: 'poppins',sans-serif;
 
 }
-html, body {
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-}
+body{
+    
+    color: #fff;
 
+
+}
 
 .sidebar{
     top: 0;
     right: 0;
     position: fixed;
-    width: 90vw;
-    max-width: 400px;
+    width: 400px;
     height: 100vh;
     height: 100dvh;
     display: none;
     flex-direction: column;
     background-color: rgb(235, 119, 119);
-    backdrop-filter: 10s blur;
+    backdrop-filter: blur(10px);
     z-index: 100;
     overflow-y: scroll;
     max-height: 100dvh;
     -webkit-overflow-scrolling: touch;
     touch-action: auto;
-    
 
     
 }
@@ -153,11 +151,14 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 60px 9%;
+    color: #fff;
+    min-height: 80vh;
+    margin-top: 20px;
+    
     visibility: hidden;
      opacity: 0;
      animation: Showcontent 1.5s linear forwards;
-   height: 100dvh;     
+        
 
 
     
@@ -233,8 +234,9 @@ nav{
     
 }
 .img-box{
-   width: 32vw;
-   height: 32vw;
+   
+    width: min(300px, 70vw);
+    height: min(300px, 70vw);
    border: none;
    border-radius: 50%;
    padding: 5px;
@@ -297,22 +299,24 @@ nav{
      transform: translateX(20%);
 }
 .wrapper{
-   position: fixed; /* Ensures it sticks behind everything */
+    position: absolute;
     width: 100vw;
     height: 100vh;
     top: 0;
     left: 0;
-    display: flex;
     z-index: 0;
+    display: flex;
 
 }
-
-.wrapper .bars {
+.wrapper .bars{
     flex: 1;
-    background: black;
-    transform: translateY(-100%);
-    animation: showBars 0.5s ease-in-out forwards;
-    animation-delay: calc(0.1s * var(--i));
+   height: 100dvh;
+  height: 100vh;
+background: black;
+transform: translateY(-100%);
+animation: showBars 0.5s ease-in-out forwards;
+animation-delay: calc(.1s * var(--i));
+overflow: hidden;
 }
 .home-info h2 span{
     display: inline-block;
@@ -339,22 +343,6 @@ nav{
     }
 }
 @media(max-width:770px){
-   .home-info {
-    flex-direction: column;
-    text-align: center;
-    padding: 100px 5%;
-    gap: 30px;
-  }
-
-  .home-box {
-    transform: none;
-    margin-top: 20px;
-  }
-
-  .img-box {
-    width: 50vw;
-    height: 50vw;
-  } 
  .home-text h1 {
 font-size: 30px;
 color: white;
@@ -381,6 +369,7 @@ color: white;
  }
 }
 @media(max-width:435px){
+    
     .btn-info .button{
         display: block;
         padding: 10px
@@ -392,3 +381,8 @@ color: white;
     
 }
 
+@media screen and (max-height: 450px) and (orientation: landscape) {
+    .home-info {
+        padding-top: 100px;
+    } 
+}
