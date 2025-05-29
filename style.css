@@ -377,6 +377,6 @@ color: white;
 }
 @media screen and (max-height: 450px) and (orientation: landscape) {
     .home-info {
-        padding-top: 100px;
+        padding-top: 150px;
     }
 }
