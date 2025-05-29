@@ -6,9 +6,9 @@
 
 }
 body{
- 
- color: white;
+    overflow: hidden;
 }
+
 .sidebar{
     top: 0;
     right: 0;
@@ -20,6 +20,8 @@ body{
     background-color: rgb(235, 119, 119);
     backdrop-filter: 10s blur;
     z-index: 100;
+    overflow-y: auto;
+
     
 }
 .sidebar li{
@@ -141,12 +143,12 @@ nav{
 .home-info{
     display: flex;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
     padding: 60px 9%;
     visibility: hidden;
      opacity: 0;
      animation: Showcontent 1.5s linear forwards;
-     
+   transform: translateY(50%);     
     
 
     
@@ -156,6 +158,7 @@ nav{
      opacity: 0;
      animation: Showcontent 1.5s linear forwards;
      animation-delay:1.8s ;
+     color: white;
     
 }
 .home-text h1{
@@ -287,18 +290,19 @@ nav{
 .wrapper{
     position: absolute;
     width: 100%;
-    height: 100dvh;
+    min-height: 100dvh;
     display: flex;
 
 }
 .wrapper .bars{
 width: 100%;
-height: 100dvh;
+min-height: 100dvh;
 background: black;
 z-index: -1;
 transform: translateY(-100%);
 animation: showBars 0.5s ease-in-out forwards;
 animation-delay: calc(.1s * var(--i));
+overflow: hidden;
 }
 .home-info h2 span{
     display: inline-block;
@@ -324,10 +328,10 @@ animation-delay: calc(.1s * var(--i));
         opacity: 1;
     }
 }
-@media(max-width:846px){
+@media(max-width:770px){
  .home-text h1 {
-font-size: 40px;
-
+font-size: 30px;
+color: white;
  }
  .home-text h2{
     font-size: 20px;
@@ -350,7 +354,7 @@ font-size: 40px;
     display: block;
  }
 }
-@media(max-width:402px){
+@media(max-width:435px){
     .btn-info .button{
         display: block;
         padding: 10px
