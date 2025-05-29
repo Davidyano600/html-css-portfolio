@@ -5,9 +5,12 @@
     font-family: 'poppins',sans-serif;
 
 }
-body{
-    overflow: scroll;
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
 }
+
 
 .sidebar{
     top: 0;
