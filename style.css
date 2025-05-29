@@ -8,6 +8,7 @@
 body{
     
     color: #fff;
+    overflow: hidden;
 
 
 }
@@ -378,5 +379,8 @@ color: white;
 @media screen and (max-height: 450px) and (orientation: landscape) {
     .home-info {
         padding-top: 150px;
+    }
+    body{
+        overflow: scroll;
     }
 }
